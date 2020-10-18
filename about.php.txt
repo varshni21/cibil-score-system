@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<h1><marquee bgcolor="SteelBlue">Cibil System</marquee></h1>
+<style>
+.container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo-small {
+    color: steelblue;
+    font-size: 50px;
+  }
+  .logo {
+    color: steelblue;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  font-size: 17px;
+}
+
+.container {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.container img {vertical-align: middle;}
+
+.container .content {
+  position:absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 10px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<img src="07cibil.jpg" alt="Nature" style="width:200%;">
+<div class="content">
+    <h4>CIBIL</h4>
+    <p>About Us</p>
+    <p>We are India's leading credit</p>
+    <p>information company with one of</p>
+    <p>the largest collections of</p>
+    <p>consumer information.</p>
+  </div>
+</div>
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2 style="color:SteelBlue;">About CIBIL</h2><br>
+      <p>TransUnion CIBIL is India's leading credit information company and maintains one of the largest collections of consumer information globally.
+We have over 2,400 members including all leading banks, financial institutions, non-banking financial companies and housing finance companies and maintain credit records of over 550 million individuals and businesses.
+Our mission is to create information solutions that enable businesses to grow and give consumers faster, cheaper access to credit and other services.
+We create value for our members by helping them manage risk and devise appropriate lending strategies to reduce costs and increase portfolio profitability. With comprehensive, reliable information on consumer and commercial borrowers, they are able to make sound credit decisions about individuals and businesses.
+By collecting, analyzing, and delivering information on the credit histories of millions of borrowers, we empower our members to plan their strategies with greater prudence. We understand our customers evolving needs and create solutions that help them innovate and grow, simultaneously creating our own opportunities to reinvest and thrive.
+Our initiatives have helped drive growth in lending over the last decade. We will continue to invest in content, insights, products and solutions across all sectors. We are also committed to being a partner in the national effort to improve financial literacy, inclusion and protection.
+</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-user logo"></span>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-globe logo slideanim"></span>
+    </div>
+    <div class="col-sm-8">
+      <h1 style="color:SteelBlue;">At TransUnion CIBIL we value</h1>
+      <h4><strong>Integrity:</strong>We act with honesty, trust and respect in all of our interactions and in everything we do. Our commitment to security and accuracy moves businesses forward.</h4>
+      <h4><strong>People:</strong>We recognize that each of us is essential to our success.</h4>
+      <h4><strong>Customers:</strong>We earn trust and build lasting relationships by delivering what we promise.</h4>
+      <h4><strong>Innovation:</strong>We aspire to deliver tomorrow's solutions today.</h4>
+  </div>
+  </div>
+</div>
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center">
+  <h2>Here is what members get:</h2>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-time logo-small"></span>
+      <h4>Unlimited access</h4>
+      <p>Check Your latest CIBIL score and Report has often as you need</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-credit-card logo-small"></span>
+      <h4>Loan Offers</h4>
+      <p>Customised preaaproved loan offers every time check your score</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-signal logo-small"></span>
+      <h4>Credit Monitoring</h4>
+      <p>Improve your credit health with personalised score analysis,credit summary and ability to track score changes</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-comment logo-small"></span>
+      <h4>Helpline</h4>
+      <p>Chat with us for any queries</p>
+    </div>
+</div>
+</div>
+</body>
+</html> 
