@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<h2><center><u>Feedback Form</h2></center></u>
+<style>
+h2 {
+  background-color:steelblue;
+  color:white;
+}
+#mySidenav a {
+position:relative;
+left:-80px;
+transition: 0.3s;
+padding: 15px;
+width: 100px;
+text-decoration: none;
+font-size: 20px;
+color: white;
+border-radius: 0 5px 5px 0;
+}
+
+#mySidenav a:hover {
+left: 0;
+}
+
+#blog {
+top: 80px;
+background-color: #2196F3;
+}
+textarea {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:50%;
+}
+div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+}
+input[type=file] {
+    background-color:skyblue;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+a:link, a:visited {
+    background-color: #f44336;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover, a:active {
+    background-color: red;
+}
+@media screen and (max-width: 700px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+}
+button {
+    background-color:skyblue;
+    color: white;
+    padding: 10px 10px;
+    margin: 200px 0;
+    border: none;
+    cursor: pointer;
+    width:15%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+body
+{
+ text-align:center;
+ width:100%;
+ margin:0 auto;
+ padding:0px;
+ font-family:helvetica;
+ background-color:#81DAF5;
+
+ background: url(1_yBzWB2j4GKfGMf3xTSOAVg.png) no-repeat center center fixed; 
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+}
+</style>
+<script src="jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#btnSubmit').click(function(){
+		$('#myAlert').show('fade');
+});
+});	
+$('#linkClose').click(function(){
+	$('#myAlert').hide(fade);
+});
+</script>
+<div class="container">
+    <form action="feedback.php" method="get">
+    <div class="textarea">
+    <textarea rows="10" cols="30" name="fd"></textarea><br><br>
+    </div>
+    <center><input type="submit" id="btnSubmit" class="btn btn-primary btn-lg" name="submit2"></center>
+    </form>
+    <div id="myAlert" class="alert alert-success collapse">
+      <a id="linkClose" href="#" class="close">&times;</a>
+      <strong>FeedBack Submitted Successfully</strong>
+    </div>
+</div>
+</body>
+<div>
+<?php
+if (isset($_GET['submit2'])){
+    $conn=mysqli_connect("localhost","root","varshni","rec");
+    $fd2 = mysqli_real_escape_string($conn, $_GET['fd']);
+    $servername = "localhost";
+    $username = "root";
+    $password = "varshni";
+    $dbname = "rec";
+    
+    try {
+        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+        // set the PDO error mode to exception
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $sql = "INSERT INTO feedback(fd)
+    VALUES ('$fd2')";
+        // use exec() because no results are returned
+        $conn->exec($sql);
+    }
+    catch(PDOException $e)
+    {
+        echo $sql . "<br>" . $e->getMessage();
+    }
+}
+$conn = null;
+?>
+</div>
+</html>
